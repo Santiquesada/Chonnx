@@ -1,0 +1,23 @@
+# Visual Studio build output
+/Debug
+/Release
+/x64
+*.plg
+*.ncb
+*.opt
+*.vcxproj.user
+.vs/
+
+# Local machine paths (see README)
+Chonnx.local.props
+
+# Binaries: distributed through GitHub Releases, not the repo
+*.chug
+*.dll
+
+# Training artifacts
+*.pth
+__pycache__/
+
+# Local cleanup folder
+_to_delete/
