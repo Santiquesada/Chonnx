@@ -7,7 +7,7 @@
 // For the full musical version (marimba + bombo + cununo) see
 // ai/CurrulaoGRU.ck in the Live-Coding-Colombian-Music repository.
 
-@import "../Chonnx.chug"
+@import "Chonnx.chug"
 
 // === PARAMETERS ===
 16  => int   N_PHRASES_TO_GENERATE;
