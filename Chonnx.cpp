@@ -138,12 +138,13 @@ CK_DLL_MFUN(chonnx_load_model)
         session_options.SetExecutionMode(ExecutionMode::ORT_SEQUENTIAL);
 
         std::string path_str(raw_path);
+        if (cxdata->session)
+          delete cxdata->session;
 
 #ifdef _WIN32
         int wlen = MultiByteToWideChar(CP_UTF8, 0, path_str.c_str(), -1, NULL, 0);
         std::wstring wide_path(wlen, 0);
         MultiByteToWideChar(CP_UTF8, 0, path_str.c_str(), -1, &wide_path[0], wlen);
-        if (cxdata->session) delete cxdata->session;
         cxdata->session = new Ort::Session(*g_ort_env, wide_path.c_str(), session_options);
 #else
 	cxdata->session = new Ort::Session(*g_ort_env, path_str.c_str(), session_options);
