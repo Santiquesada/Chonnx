@@ -25,7 +25,7 @@ FLAGS+=-mmacosx-version-min=10.9 -I$(CK_SRC_PATH) $(ARCHOPTS) -fPIC
 # here multiple rpaths are being defined:
 # - deps/onnxruntime/lib is the location of the onnx libs in the repo
 # - _deps/ is the location of the onnx libs when it is installed as a chump package
-LDFLAGS+=-mmacosx-version-min=10.9 -shared $(ARCHOPTS) -L deps/onnxruntime/lib -lonnxruntime -Wl,-rpath,deps/onnxruntime/lib,-rpath,_deps/
+LDFLAGS+=-mmacosx-version-min=10.9 -shared $(ARCHOPTS) -L deps/onnxruntime/lib -lonnxruntime -Wl,-rpath,@loader_path/deps/onnxruntime/lib,-rpath,@loader_path/_deps/
 
 # which C++ compiler
 CXX=clang++
