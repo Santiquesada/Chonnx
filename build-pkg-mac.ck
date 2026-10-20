@@ -38,6 +38,8 @@ ver.addFile("./Chonnx.chug");
 
 // These build files are examples as well
 ver.addExampleFile("examples/currulao_gru_predict.ck");
+ver.addFile("models/currulao_gru.onnx", "models");
+ver.addFile("models/currulao.onnx", "models");
 ver.addDepsFile("deps/onnxruntime/lib/libonnxruntime.1.dylib");
 
 // The version path
