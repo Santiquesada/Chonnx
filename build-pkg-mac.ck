@@ -7,13 +7,13 @@
 Package pkg("Chonnx");
 
 // Add our metadata...
-"" => pkg.authors;
+"Santiago Quesada" => pkg.authors;
 
 "https://github.com/Santiquesada/Chonnx" => pkg.homepage;
 "https://github.com/Santiquesada/Chonnx" => pkg.repository;
 
 "MIT" => pkg.license;
-"" => pkg.description;
+"Generic ONNX Runtime inference for ChucK: load any float32 .onnx model and run it in real time." => pkg.description;
 
 ["machine learning", "onnx", "inference"] => pkg.keywords;
 
